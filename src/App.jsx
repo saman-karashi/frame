@@ -6,7 +6,7 @@ import { createPortal } from 'react-dom';
 import Overlay from './components/overlay';
 
 function App() {
-const [modalIsDisplayed,setModalDisplayed] = useState(true);
+const [modalIsDisplayed,setModalDisplayed] = useState(false);
 
 
   return (
