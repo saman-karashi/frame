@@ -29,6 +29,7 @@ a{
   font-size: 1.3rem;
   color: #fff;
   cursor: pointer;
+  display: inline-block;
 }
 
 .close-modal:hover{
@@ -43,7 +44,7 @@ a{
 
 #modal .modal--inner > * > h3,
 #modal .modal--inner > * > ul{
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(197, 197, 197);
 }
 
 #modal .modal--inner > * > h3{
@@ -60,7 +61,7 @@ a{
 
 
 #overlay{
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
   z-index: 100;
