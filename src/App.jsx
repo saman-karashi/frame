@@ -1,36 +1,24 @@
 
-import './App.css';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import Modal from './components/modal';
 import { createPortal } from 'react-dom';
 import Overlay from './components/overlay';
+import Homepage from './pages/home';
 
 function App() {
-const [modalIsDisplayed,setModalDisplayed] = useState(false);
+const [modalIsActive,setModalIsActive] = useState(false);
 
+
+useEffect(()=>{
+modalIsActive && window.scrollTo(0,0)
+},[modalIsActive])
 
   return (
-    <div className="container">
-      <div className='buttons'>
-        <button onClick={()=> setModalDisplayed(true)}>
-          دیدگاه مدیریتی محض
-        </button>
-        <button onClick={()=> setModalDisplayed(true)}>
-          نوع بار(دیدگاه نسبتافنی)
-        </button>
-        <button onClick={()=> setModalDisplayed(true)}>
-          طول فیدرهای فشار متوسط و میزان فروش انرژی
-        </button>
-        <button onClick={()=> setModalDisplayed(true)}>
-          طول فیدر میزان فروش و پراکندگی مشترک
-        </button>
-        <button onClick={()=> setModalDisplayed(true)}>
-         طول فیدرهای متوسط میزان فروش انرژی و نوع بار
-        </button>
-      </div>
-      {modalIsDisplayed && createPortal(<Modal setModalDisplayed={setModalDisplayed} />,document.getElementById('modal'))}
-      {modalIsDisplayed && <Overlay setModalDisplayed={setModalDisplayed} />}
-    </div>
+    <>
+    <Homepage setModalIsActive={setModalIsActive} />
+    {modalIsActive && createPortal(<Modal setModalIsActive={setModalIsActive} />,document.getElementById('modal'))}
+    {modalIsActive && <Overlay setModalIsActive={setModalIsActive}/>}
+    </>
   );
 }
 

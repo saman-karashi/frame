@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Overlay = ({setModalDisplayed}) => {
+const Overlay = ({setModalIsActive}) => {
   return (
-    <div id='overlay' onClick={()=> setModalDisplayed(false)}></div>
+    <div id='overlay' onClick={()=> setModalIsActive(false)}></div>
   )
 }
 

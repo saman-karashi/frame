@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@import url("./base/_typography.scss");
+@import url("./bootstrap/_custom.scss");
+li,
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.box-card {
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.box-card:hover {
+  background-color: #7885DA !important;
+  color: white;
+}
+.box-card:hover > div > * {
+  color: white !important;
+}
+
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  z-index: 3000;
+  transform: translate(-50%, -50%);
+}
+#modal .close-modal {
+  text-align: start;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+}
+#modal .close-modal:hover {
+  color: gray;
+}
+#modal .modal--inner {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  display: grid;
+}
+#modal .modal--inner > * > h3, #modal .modal--inner > * > ul {
+  background-color: rgb(211, 211, 211);
+}
+#modal .modal--inner > * > h3 {
+  text-align: center;
+  padding: 0.75rem;
+}
+#modal .modal--inner > * > ul {
+  padding: 1rem 2rem;
+}
+#modal .modal--inner > * > ul > li {
+  margin: 1rem 0;
+}
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.navbar--bell-icon {
+  position: relative;
+  font-size: 0.7rem;
+}
+
+.navbar--bell-icon::after {
+  background-color: red;
+  right: -10px;
+  top: -8px;
+  width: 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  height: 15px;
+  border-radius: 50px;
+  content: "+۹۹";
+  position: absolute;
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #modal {
+    transform: translate(-50%, -20%);
+    width: 80%;
+  }
+  .card-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  #modal {
+    transform: translate(-50%, -20%);
+  }
+  #modal .modal--inner {
+    grid-template-columns: 1fr;
+  }
+}

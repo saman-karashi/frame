@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Modal = ({setModalDisplayed}) => {
+const Modal = ({setModalIsActive}) => {
   return (
     <>
-    <div className='close-modal' onClick={()=> setModalDisplayed(false)}>بستن</div>
+    <div className='close-modal' onClick={()=> setModalIsActive(false)}>X</div>
     <div className='modal--inner'>
         <div>
             <h3 className='modal-heading'>خوشه ۱</h3>

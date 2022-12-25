@@ -1,0 +1,47 @@
+
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6:$spacer * 4,
+  7:$spacer * 5,
+  8:$spacer * 6,
+  9:$spacer * 7
+);
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1320px,
+  xxl: 1600px
+) !default;
+
+
+$input-placeholder-color:#fff;
+$input-border-color: transparent;
+$bg-light:#F5F6FF;
+$theme-colors:(
+orange-300:#FCDEBD,
+orange-600:#F6A453,
+primary:#6EC0FC,
+secondary:#7885DA,
+dark-300:#C1C6EE,
+dark-600:#7A87DB,
+purple-300:#D6C7D5,
+purple-600:#764575,
+pink-300:#EEBDCA,
+pink-600:#CD2E59,
+blue-300:#C4DAFA,
+blue-600:#3B86F2
+);
+
+$font-family-base:'vazir medium';
+
+@import "~bootstrap/scss/bootstrap";
